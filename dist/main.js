@@ -1,8 +1,8 @@
 import * as THREE from 'three';
 import './style.css';
 /*import javascriptLogo from './javascript.svg'
-import viteLogo from 'public.vite.svg'*/
-import { setupCounter } from '../counter.js'
+// import viteLogo from 'public.vite.svg'*/
+// import { setupCounter } from '../counter.js'
 // Setup
 
 const scene = new THREE.Scene();
