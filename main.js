@@ -1,4 +1,4 @@
-import * as THREE from 'import three from 'https://cdn.skypack.dev/three';
+import three as THREE from "https://cdn.skypack.dev/three";
 import './style.css';
 /*import javascriptLogo from './javascript.svg'
 // import viteLogo from 'public.vite.svg'*/
