@@ -43,10 +43,12 @@ const ico = new THREE.IcosahedronGeometry(10);
 const icoMaterial = new THREE.MeshPhongMaterial({ color: 0x006699 });
 const icoMesh = new THREE.Mesh(ico, icoMaterial);
 
-const sphereGeometry = new THREE.SphereGeometry( 5, 22, 10 );
+const sphereGeometry = new THREE.SphereGeometry( 5, 10, 5 );
 const circuitMaterial = new THREE.MeshBasicMaterial({map: circuitTexture})
 const circuitMesh = new THREE.Mesh(sphereGeometry, circuitMaterial);
 
+// object.position.set ( x, y, z );
+sphereGeometry.position.set(5, 10, 15);
 
 // Lights
 
