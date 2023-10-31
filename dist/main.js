@@ -86,8 +86,8 @@ function animate() {
         icoMesh.rotation.z += -0.01
         icoMesh.rotation.y += -0.02
 
-        circuitMesh.rotation.z += 0.02
-        circuitMesh.rotation.y += 0.01
+        puffinMesh.rotation.z += 0.02
+        puffinMesh.rotation.y += 0.01
         controls.update()
 
         renderer.render( scene, camera );
