@@ -12,6 +12,7 @@ const scene = new THREE.Scene();
 //Textures
 const libraryTexture = new THREE.TextureLoader().load('images/Merton_College_library_hall.jpg')
 const circuitTexture = new THREE.TextureLoader().load('images/circuitry-nightcafe.jpg')
+const puffinTexture = new THREE.TextureLoader().load('images/puffin-habitat.jpg')
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -45,11 +46,11 @@ const icoMesh = new THREE.Mesh(ico, icoMaterial);
 
 const sphereGeometry = new THREE.SphereGeometry( 15, 64, 32 );
 // See https://threejs.org/docs/#api/en/geometries/SphereGeometry
-const circuitMaterial = new THREE.MeshBasicMaterial({map: circuitTexture})
-const circuitMesh = new THREE.Mesh(sphereGeometry, circuitMaterial);
+const puffinMaterial = new THREE.MeshBasicMaterial({map: puffinTexture})
+const puffinMesh = new THREE.Mesh(sphereGeometry, circuitMaterial);
 
 // object.position.set ( x, y, z );
-circuitMesh.position.set(5, 10, 15);
+puffinMesh.position.set(5, 10, 15);
 
 // Lights
 
