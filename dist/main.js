@@ -43,7 +43,8 @@ const ico = new THREE.IcosahedronGeometry(10);
 const icoMaterial = new THREE.MeshPhongMaterial({ color: 0x006699 });
 const icoMesh = new THREE.Mesh(ico, icoMaterial);
 
-const sphereGeometry = new THREE.SphereGeometry( 15, 20, 15 );
+const sphereGeometry = new THREE.SphereGeometry( 15, 64, 32 );
+// See https://threejs.org/docs/#api/en/geometries/SphereGeometry
 const circuitMaterial = new THREE.MeshBasicMaterial({map: circuitTexture})
 const circuitMesh = new THREE.Mesh(sphereGeometry, circuitMaterial);
 
