@@ -6,6 +6,7 @@ import './style.css';
 // Setup
 
 const scene = new THREE.Scene();
+const libraryTexture = new THREE.TextureLoader().load('images/Merton_College_library_hall.jpg')
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -45,6 +46,7 @@ pointLight.position.set(0, -10, 10);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 ambientLight.position.set(25, -15, -400);
 
+scene.background = libraryTexture;
 scene.add( cube );
 scene.add(icoMesh);
 
