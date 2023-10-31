@@ -30,6 +30,8 @@ const material = new THREE.MeshBasicMaterial( { color: 0xFF6347 } );
 
 const cube = new THREE.Mesh( geometry, material );
 
+const controls = new OrbitControls(camera, renderer.domElement)
+
 
 cube.position.z = -15;
 cube.position.x = -15;
@@ -42,7 +44,7 @@ const icoMaterial = new THREE.MeshPhongMaterial({ color: 0x006699 });
 const icoMesh = new THREE.Mesh(ico, icoMaterial);
 
 const sphereGeometry = new THREE.SphereGeometry( 10, 22, 10 );
-const circuitMaterial = new THREE.MeshBasicMaterial({map: circuitTexture});
+const circuitMaterial = new THREE.MeshBasicMaterial({map: circuitTexture})
 const circuitMesh = new THREE.Mesh(sphereGeometry, circuitMaterial);
 
 
