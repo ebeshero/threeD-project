@@ -8,7 +8,11 @@ import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/l
 // Setup
 
 const scene = new THREE.Scene();
+
+//Textures
 const libraryTexture = new THREE.TextureLoader().load('images/Merton_College_library_hall.jpg')
+const circuitTexture = new THREE.TextureLoader().load('images/circuitry-nightcafe.jpg')
+
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 
@@ -37,6 +41,9 @@ const ico = new THREE.IcosahedronGeometry(10);
 const icoMaterial = new THREE.MeshPhongMaterial({ color: 0x006699 });
 const icoMesh = new THREE.Mesh(ico, icoMaterial);
 
+const sphereGeometry = new THREE.SphereGeometry( 10, 22, 10 );
+const circuitMaterial = new THREE.MeshBasicMaterial({map: circuitTexture});
+const circuitMesh = new THREE.Mesh(sphereGeometry, circuitMaterial);
 
 
 // Lights
@@ -50,6 +57,7 @@ ambientLight.position.set(25, -15, -400);
 scene.background = libraryTexture;
 scene.add( cube );
 scene.add(icoMesh);
+scene.add(circuitMesh)
 
 icoMesh.position.z= -15;
 icoMesh.position.x= 15;
@@ -71,6 +79,9 @@ function animate() {
         // rotate the icosahedron a little faster in the opposite direction:
         icoMesh.rotation.z += -0.01
         icoMesh.rotation.y += -0.02
+
+        circuitMesh.rotation.y += 0.05
+        controls.update()
 
         renderer.render( scene, camera );
 }
