@@ -12,7 +12,7 @@ const scene = new THREE.Scene();
 //Textures
 const libraryTexture = new THREE.TextureLoader().load('images/Merton_College_library_hall.jpg')
 const circuitTexture = new THREE.TextureLoader().load('images/circuitry-nightcafe.jpg')
-const puffinTexture = new THREE.TextureLoader().load('images/puffin-habitat.jpg')
+const puffinTexture = new THREE.TextureLoader().load('images/warofworldswordcloud.jpg')
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -50,7 +50,7 @@ const puffinMaterial = new THREE.MeshBasicMaterial({map: puffinTexture})
 const puffinMesh = new THREE.Mesh(sphereGeometry, puffinMaterial);
 
 // object.position.set ( x, y, z );
-puffinMesh.position.set(5, 10, 15);
+puffinMesh.position.set(1, 1, 5);
 
 // Lights
 
