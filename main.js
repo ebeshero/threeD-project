@@ -33,7 +33,7 @@ cube.rotation.x = 2;
 cube.rotation.y = .5;
 
 const ico = new THREE.IcosahedronGeometry(10);
-const icoMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
+const icoMaterial = new THREE.MeshPhongMaterial({ color: 0x006699});
 const icoMesh = new THREE.Mesh(ico, icoMaterial);
 
 
@@ -68,8 +68,8 @@ function animate() {
         cube.rotation.x += 0.01;
         cube.rotation.y += 0.01;
         // rotate the icosahedron a little faster in the opposite direction:
-        icoMesh.rotation.z += -0.03
-        icoMesh.rotation.y += -0.03
+        icoMesh.rotation.z += -0.02
+        icoMesh.rotation.y += -0.01
 
         renderer.render( scene, camera );
 }
