@@ -8,7 +8,7 @@ import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/l
 // Setup
 
 const scene = new THREE.Scene();
-
+const libraryTexture = new THREE.TextureLoader().load('images/Merton_College_library_hall.jpg')
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 
@@ -31,7 +31,7 @@ cube.position.z = -15;
 cube.position.x = -15;
 
 cube.rotation.x = 2;
-cube.rotation.y = .5;
+cube.rotation.y = 50;
 
 const ico = new THREE.IcosahedronGeometry(10);
 const icoMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
@@ -47,6 +47,7 @@ pointLight.position.set(0, -10, 10);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 ambientLight.position.set(25, -15, -400);
 
+scene.background = libraryTexture;
 scene.add( cube );
 scene.add(icoMesh);
 
