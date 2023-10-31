@@ -48,7 +48,7 @@ const circuitMaterial = new THREE.MeshBasicMaterial({map: circuitTexture})
 const circuitMesh = new THREE.Mesh(sphereGeometry, circuitMaterial);
 
 // object.position.set ( x, y, z );
-sphereGeometry.position.set(5, 10, 15);
+circuitMesh.position.set(5, 10, 15);
 
 // Lights
 
