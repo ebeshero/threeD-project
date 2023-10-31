@@ -63,7 +63,7 @@ ambientLight.position.set(25, -15, -400);
 scene.background = libraryTexture;
 scene.add( cube );
 scene.add(icoMesh);
-scene.add(circuitMesh)
+scene.add(puffinMesh)
 
 icoMesh.position.z= -15;
 icoMesh.position.x= 15;
