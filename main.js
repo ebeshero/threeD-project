@@ -47,7 +47,7 @@ const icoMesh = new THREE.Mesh(ico, icoMaterial);
 const sphereGeometry = new THREE.SphereGeometry( 15, 64, 32 );
 // See https://threejs.org/docs/#api/en/geometries/SphereGeometry
 const puffinMaterial = new THREE.MeshBasicMaterial({map: puffinTexture})
-const puffinMesh = new THREE.Mesh(sphereGeometry, circuitMaterial);
+const puffinMesh = new THREE.Mesh(sphereGeometry, puffinMaterial);
 
 // object.position.set ( x, y, z );
 puffinMesh.position.set(5, 10, 15);
