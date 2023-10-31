@@ -43,7 +43,7 @@ const ico = new THREE.IcosahedronGeometry(10);
 const icoMaterial = new THREE.MeshPhongMaterial({ color: 0x006699 });
 const icoMesh = new THREE.Mesh(ico, icoMaterial);
 
-const sphereGeometry = new THREE.SphereGeometry( 10, 22, 10 );
+const sphereGeometry = new THREE.SphereGeometry( 5, 22, 10 );
 const circuitMaterial = new THREE.MeshBasicMaterial({map: circuitTexture})
 const circuitMesh = new THREE.Mesh(sphereGeometry, circuitMaterial);
 
@@ -82,7 +82,8 @@ function animate() {
         icoMesh.rotation.z += -0.01
         icoMesh.rotation.y += -0.02
 
-        circuitMesh.rotation.y += 0.05
+        circuitMesh.rotation.z += 0.02
+        circuitMesh.rotation.y += 0.01
         controls.update()
 
         renderer.render( scene, camera );
